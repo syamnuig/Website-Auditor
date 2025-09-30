@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Website Audit Checklist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Website Audit Checklist</h1>
+    <p>Review your site’s SEO, performance, accessibility, content, UX, and security.</p>
+  </header>
+
+  <main class="container">
+    <!-- Checklist panel -->
+    <section class="card">
+      <h2>Checklist</h2>
+
+      <div class="btn-row">
+        <button class="primary" id="expandAllBtn">Expand all</button>
+        <button id="collapseAllBtn">Collapse all</button>
+        <button id="clearAllBtn">Clear checks</button>
+      </div>
+
+      <div id="checklist"></div>
+      <div id="error" class="error" style="display:none;"></div>
+    </section>
+
+    <!-- Summary panel -->
+    <section class="card">
+      <h2>Summary</h2>
+
+      <div class="grid-2">
+        <div class="stat">
+          <div class="label">Completed</div>
+          <div id="outCompleted" class="value">—</div>
+        </div>
+        <div class="stat">
+          <div class="label">Total items</div>
+          <div id="outTotal" class="value">—</div>
+        </div>
+        <div class="stat">
+          <div class="label">Overall score</div>
+          <div id="outOverall" class="value">—</div>
+        </div>
+        <div class="stat">
+          <div class="label">Sections covered</div>
+          <div id="outSections" class="value">—</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="stat">
+        <div class="label">Category scores</div>
+        <div id="outCategoryScores" class="value">—</div>
+      </div>
+
+      <div class="chart-wrap">
+        <div class="label">Category score bars</div>
+        <svg id="chart" viewBox="0 0 600 240" preserveAspectRatio="none"></svg>
+        <div class="legend">
+          <span><i class="chip"></i> Score by category</span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="stat">
+        <div class="label">Top outstanding items</div>
+        <ul id="outOutstanding" class="todo-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Tip: Re-audit after major content or design changes.</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

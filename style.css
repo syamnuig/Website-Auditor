@@ -1,0 +1,136 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --muted: #9ca3af;
+  --text: #e5e7eb;
+  --accent: #22c55e;
+  --warn: #f59e0b;
+  --danger: #ef4444;
+  --border: #1f2937;
+  --blue: #60a5fa;
+  --grid: #374151;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  background: radial-gradient(1200px 600px at 80% 0%, #1f2937 0%, var(--bg) 40%, #0b1225 100%);
+  color: var(--text);
+}
+header { padding: 24px 24px 8px; border-bottom: 1px solid var(--border); }
+header h1 { margin: 0 0 8px; font-size: 1.6rem; }
+header p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+.container {
+  display: grid; gap: 16px; padding: 24px;
+  grid-template-columns: 380px 1fr;
+}
+.card {
+  background: linear-gradient(180deg, rgba(31,41,55,0.7), rgba(17,24,39,0.9));
+  border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px;
+  backdrop-filter: blur(6px);
+}
+.card h2 { margin: 0 0 12px; font-size: 1.1rem; font-weight: 600; color: #ffffff; }
+
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+label { display: block; font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; }
+
+.btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+button {
+  background: #0b1020; color: var(--text); border: 1px solid var(--border);
+  padding: 10px 12px; border-radius: 8px; cursor: pointer;
+}
+button.primary { background: #1f2937; border-color: #334155; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.stat {
+  background: #0b1020; border: 1px solid var(--border); border-radius: 10px; padding: 12px;
+}
+.stat .label { color: var(--muted); font-size: 0.8rem; }
+.stat .value { font-size: 1.1rem; margin-top: 6px; }
+.value.good { color: var(--accent); }
+.value.warn { color: var(--warn); }
+.value.bad { color: var(--danger); }
+
+.chart-wrap {
+  margin-top: 12px;
+  background: #0b1020; border: 1px solid var(--border); border-radius: 12px; padding: 12px;
+}
+svg { width: 100%; height: 240px; display: block; }
+.legend { display: flex; gap: 16px; color: var(--muted); font-size: 0.85rem; margin-top: 6px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.chip { width: 14px; height: 3px; display: inline-block; background: var(--blue); }
+.divider { height: 1px; background: var(--border); margin: 8px 0; }
+footer { padding: 12px 24px; color: var(--muted); font-size: 0.8rem; border-top: 1px solid var(--border); }
+
+.section {
+  border: 1px solid var(--border);
+  background: #0b1020;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.section-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 12px; cursor: pointer; color: #ffffff;
+}
+.section-title { font-weight: 600; }
+.section-toggle { color: var(--muted); font-size: 0.9rem; }
+
+.section-body { padding: 10px 12px; display: none; }
+.section-body.open { display: block; }
+
+.check-item {
+  display: flex; gap: 10px; align-items: flex-start;
+  padding: 6px 0; border-bottom: 1px dashed var(--border);
+}
+.check-item:last-child { border-bottom: none; }
+.check-item input[type="checkbox"] { margin-top: 2px; accent-color: var(--blue); }
+
+.item-label { font-size: 0.95rem; }
+.item-help { color: var(--muted); font-size: 0.8rem; margin-top: 2px; }
+
+.notes {
+  margin-top: 8px;
+  width: 100%; min-height: 60px;
+  background: #0b1020; color: var(--text); border: 1px solid var(--border);
+  border-radius: 8px; padding: 8px; resize: vertical;
+}
+.todo-list {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 6px 0 0;
+}
+
+.info-card {
+  margin: 16px 24px;
+  background: linear-gradient(180deg, rgba(31,41,55,0.6), rgba(17,24,39,0.85));
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  color: var(--text);
+}
+
+.info-card h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.info-card p {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.info-card ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.info-card li {
+  margin-bottom: 6px;
+}
